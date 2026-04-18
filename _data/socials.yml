@@ -1,0 +1,10 @@
+# Social media links and usernames.
+# Displayed in the order they are defined here.
+# Docs: https://github.com/george-gca/jekyll-socials
+cv_pdf: /assets/pdf/frank_shih_cv.pdf  # drop your exported CV PDF at assets/pdf/frank_shih_cv.pdf
+email: fshih37@gmail.com
+orcid_id: 0009-0005-0061-5050
+scholar_userid: yBogbycAAAAJ
+github_username: FrankShih0807
+linkedin_username: frank-shih-874029193
+rss_icon: true
