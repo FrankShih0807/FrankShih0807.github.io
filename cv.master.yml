@@ -1,0 +1,277 @@
+# Master CV — single source of truth.
+# Every entry has an `audience:` list. The build script filters by tag
+# to produce each variant (cv-academic.pdf, cv-industry.pdf, short-bio.md, etc.).
+#
+# Audience tags used in this file:
+#   all          – include in every variant
+#   academic     – full academic CV (faculty/postdoc applications, tenure files)
+#   grant        – NSF/NIH-style biosketch (succinct, methods/impact focused)
+#   industry     – general industry applications (research scientist, applied scientist)
+#   industry-ml  – ML-heavy industry roles (DeepMind, FAIR, Anthropic, etc.)
+#   short-bio    – 2–4 line talk intro / panel blurb
+#
+# TODO markers flag things I couldn't extract from the .tex and that you
+# should fill in before the first real build.
+
+basics:
+  name: Frank Shih
+  headline: Postdoctoral Research Scholar in Biostatistics and Machine Learning
+  affiliation: Memorial Sloan Kettering Cancer Center
+  email: fshih37@gmail.com
+  phone: "+1 (765) 701-8199"
+  location: New York, NY
+  links:
+    linkedin: https://www.linkedin.com/in/frank-shih-874029193/
+    github: https://github.com/FrankShih0807
+    scholar: https://scholar.google.com/citations?user=yBogbycAAAAJ
+    orcid: https://orcid.org/0009-0005-0061-5050
+    website: ""   # will be filled once the site is live
+
+summary:
+  long: >
+    Postdoctoral Research Scholar in Biostatistics and Machine Learning with
+    research interests in uncertainty quantification, reinforcement learning,
+    stochastic gradient MCMC, and extended fiducial inference. I develop
+    statistically rigorous and scalable methods for deep learning and
+    scientific computing, with applications to biomedical research
+    (e.g., microbiome studies, CAR-T therapy). First-author publications in
+    ICLR, NeurIPS, and TMLR.
+  short: >
+    Frank Shih is a postdoctoral research scholar at Memorial Sloan Kettering
+    Cancer Center working on uncertainty quantification for deep learning and
+    reinforcement learning, with applications to biomedical research.
+    # TODO: confirm / tweak — this is a draft short bio for talk intros.
+
+research_interests:
+  - Uncertainty Quantification for Deep Learning
+  - Reinforcement Learning
+  - Stochastic Gradient MCMC
+  - Extended Fiducial Inference
+
+appointments:
+  - role: Postdoctoral Research Scholar
+    org: Memorial Sloan Kettering Cancer Center
+    dept: Dept. of Epidemiology & Biostatistics
+    location: New York, NY
+    start: 2025-09
+    end: present
+    audience: [all]
+    bullets:
+      - text: >
+          Develop EFI-based methodology for high-dimensional survival analysis,
+          providing calibrated uncertainty quantification and model selection
+          for complex microbiome studies.
+        audience: [academic, grant]
+      - text: >
+          Extend EFI to LSTM models to quantify uncertainty in time-series
+          predictions, with applications to CAR-T therapy.
+        audience: [academic, industry-ml, grant]
+      - text: >
+          Collaborate with statisticians, computer scientists, and clinicians
+          to translate these methods into practical tools for clinical and
+          translational research.
+        audience: [academic, industry, grant]
+
+  - role: Graduate Research Assistant / PhD Candidate
+    org: Purdue University
+    dept: Dept. of Statistics
+    location: West Lafayette, IN
+    start: 2019-08
+    end: 2025-08
+    audience: [all]
+    bullets:
+      - text: >
+          Proposed uncertainty-aware reinforcement learning methods with
+          theoretical guarantees and empirical validation (ICLR 2024, TMLR 2025).
+        audience: [academic, industry-ml, grant]
+      - text: >
+          Constructed EFI-PINNs for PDEs (Poisson, Black–Scholes), enabling
+          calibrated uncertainty quantification for physics-informed neural
+          networks (NeurIPS 2025).
+        audience: [academic, grant]
+      - text: >
+          Developed EFI-based high-dimensional regression for biomarker
+          discovery, integrating model selection and interval estimation in a
+          unified EFI framework.
+        audience: [academic, grant]
+
+education:
+  - institution: Purdue University
+    degree: Ph.D.
+    field: Statistics
+    location: West Lafayette, IN
+    start: 2019-08
+    end: 2025-08
+    advisor: Faming Liang
+    thesis: "Uncertainty Quantification in Machine Learning: Deep Reinforcement Learning and Physics-Informed Neural Networks"
+    audience: [all]
+
+  - institution: National Taiwan University
+    degree: M.S.
+    field: Applied Mathematics
+    location: Taipei, Taiwan
+    start: 2015-08
+    end: 2018-06
+    audience: [all]
+
+  - institution: National Taiwan University
+    degree: B.S.
+    field: Mathematics
+    location: Taipei, Taiwan
+    start: 2011-08
+    end: 2015-06
+    audience: [all]
+
+publications:
+  - key: shih2024fast
+    authors: ["Frank Shih", "Faming Liang"]
+    title: "Fast Value Tracking for Deep Reinforcement Learning"
+    venue: International Conference on Learning Representations
+    venue_short: ICLR
+    year: 2024
+    type: conference
+    first_author: true
+    tier: top                 # used to bold / star in some variants
+    url: https://arxiv.org/abs/2403.13178
+    code: ""                  # not yet released: GitHub link if public
+    audience: [all]
+
+  - key: shih2025latent
+    authors: ["Frank Shih", "Faming Liang"]
+    title: "Latent Trajectory: A New Framework for Deep Actor–Critic Reinforcement Learning with Uncertainty Quantification"
+    venue: Transactions on Machine Learning Research
+    venue_short: TMLR
+    year: 2025
+    type: journal
+    first_author: true
+    tier: top
+    url: https://openreview.net/pdf?id=8B74xdaRHa
+    code: ""                  # not yet released
+    audience: [all]
+
+  - key: shih2025efipinn
+    authors: ["Frank Shih", "Zihao Jiang", "Faming Liang"]
+    title: "Uncertainty Quantification for Physics-Informed Neural Networks with Extended Fiducial Inference"
+    venue: Advances in Neural Information Processing Systems
+    venue_short: NeurIPS
+    year: 2025
+    type: conference
+    first_author: true
+    tier: top
+    url: https://arxiv.org/abs/2505.19136
+    code: ""                  # not yet released
+    audience: [all]
+
+# Commented-out in your .tex — keeping here so variants can re-enable.
+skills:
+  programming:
+    - { name: "Python",  level: advanced }
+    - { name: "PyTorch", level: advanced }
+    - { name: "R",       level: proficient }
+    - { name: "MATLAB",  level: proficient }
+    - { name: "Git",     level: proficient }
+    - { name: "SLURM/Bash", level: proficient }
+  methods:
+    - Reinforcement Learning
+    - Deep Learning
+    - Bayesian Statistics
+    - Stochastic Gradient MCMC
+    - Extended Fiducial Inference
+    - Uncertainty Quantification
+    - Statistical Modeling
+  audience: [industry, industry-ml]   # typically hidden on academic CVs
+
+# -------------------------------------------------------------------
+# Sections below are empty in your current .tex but standard on
+# academic CVs. Fill what applies — leave [] for ones you don't need.
+# -------------------------------------------------------------------
+
+talks:
+  - title: "High-Dimensional Survival Analysis with Extended Fiducial Inference"
+    venue: "ENAR 2026 Spring Meeting"
+    location: "Indianapolis, IN"
+    date: 2026-03-15
+    kind: poster
+    audience: [academic, grant]
+
+# Template entry for future additions:
+# - title: "Fast Value Tracking for Deep RL"
+#   venue: ICLR 2024
+#   location: Vienna, Austria
+#   date: 2024-05
+#   kind: contributed   # contributed | invited | poster | seminar
+#   audience: [academic, grant]
+
+preprints: []
+# - key: shih2026xyz
+#   title: "..."
+#   authors: ["Frank Shih", "..."]
+#   venue: arXiv
+#   year: 2026
+#   url: ""
+#   audience: [academic, industry-ml]
+
+teaching: []
+# - role: Teaching Assistant
+#   course: "STAT 511: Statistical Methods"
+#   institution: Purdue University
+#   term: Fall 2021
+#   audience: [academic]
+
+mentoring: []
+# - student: "..."
+#   role: "Co-advised undergraduate researcher"
+#   project: "..."
+#   years: 2023–2024
+#   audience: [academic]
+
+awards: []
+# - name: "Ross Fellowship"
+#   org: Purdue University
+#   year: 2019
+#   audience: [all]
+
+service:
+  - role: Reviewer
+    org: International Conference on Machine Learning (ICML)
+    years: "2026"
+    audience: [academic, industry-ml]
+
+grants: []
+# (Postdocs sometimes list training grants they're supported by.)
+
+media: []   # press coverage, blog features, etc.
+
+# -------------------------------------------------------------------
+# Layout hints consumed by the build script.
+# -------------------------------------------------------------------
+layout:
+  section_order:
+    - summary
+    - research_interests
+    - appointments
+    - education
+    - publications
+    - preprints
+    - talks
+    - teaching
+    - mentoring
+    - awards
+    - service
+    - skills
+  variants:
+    academic:
+      include: [summary, research_interests, appointments, education,
+                publications, preprints, talks, teaching, mentoring,
+                awards, service]
+      style: classic
+    industry-ml:
+      include: [summary, appointments, education, publications, skills, awards]
+      style: compact
+      summary_field: short
+    grant:
+      include: [summary, appointments, education, publications, awards]
+      style: biosketch
+    short-bio:
+      include: [summary]
+      summary_field: short
