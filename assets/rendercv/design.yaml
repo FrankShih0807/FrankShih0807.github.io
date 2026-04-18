@@ -2,6 +2,24 @@
 design:
   theme: classic
   page:
-    size: a4
-    show_footer: false
-    show_top_note: false
+    size: us-letter
+    show_page_numbering: true
+    show_last_updated_date: true
+  colors:
+    text: rgb(0, 0, 0)
+    name: rgb(0, 0, 0)
+    connections: rgb(0, 0, 0)
+    section_titles: rgb(0, 79, 144)
+    links: rgb(0, 79, 144)
+  text:
+    font_family: New Computer Modern
+    font_size: 10pt
+    alignment: justified
+  links:
+    underline: true
+    use_external_link_icon: false
+  header:
+    name_font_size: 26pt
+    name_bold: true
+    alignment: center
+    use_icons_for_connections: true
