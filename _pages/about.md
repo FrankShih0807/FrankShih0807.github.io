@@ -6,7 +6,7 @@ subtitle: Postdoctoral Research Scholar, <a href="https://www.mskcc.org/departme
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: frank_shih_headshot.jpg
   image_circular: false
   more_info: >
     <p>Memorial Sloan Kettering Cancer Center</p>
